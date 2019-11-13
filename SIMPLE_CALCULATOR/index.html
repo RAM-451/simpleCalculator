@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content ="Javascript calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CALCULATOR</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+<style>
+body{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+}
+div{
+    position: absolute;
+    top:10%;
+    left:40%;
+    border: 25px solid rgba(0,0,0,.3) ;
+    border-radius: 10%;
+
+}
+  /* #myform{
+    margin-left:225px;
+    margin-top:20px;
+ } */
+
+
+
+
+ h1{
+/* text-align:center; */
+font-size:40px;
+/* margin-left:150px; */
+/* margin-top:40px; */
+
+ }
+
+
+
+input{
+width: 60px;
+height:60px;
+font-size: 40px;
+border-radius:10px;
+margin:10px;
+background-color:#000;
+color:#fff;
+border-style:none;
+}
+.Display{
+width:310px;
+height:70px;
+text-align:right;
+background-color:#1f80c9;
+}
+input[value="+"]{
+background-color:#cc5c11;
+}
+
+input[value="-"]{
+    background-color:#ba55d3;
+    }
+    
+
+    input[value="X"]{
+        background-color:#7db1b2;
+        }
+.symbol{
+    font-size:33px
+}
+@media(max-width: 40rem){
+
+    input{
+width: 25px;
+height:30px;
+font-size: 20px;
+border-radius:5px;
+margin:5px;
+}
+.symbol{
+    font-size: 10px;
+    font-weight: bold;
+}
+.Display{
+width:142px;
+height:30px;
+}
+h1{
+/* text-align:center; */
+font-size:20px;
+color:darkorange;
+}
+div{
+    
+    border: 10px solid rgba(0,0,0,.3) ; 
+    left:100px;
+}
+}
+ </style>
+
+</head>
+    <body>
+        <div>
+            
+        <h1>Basic Calculator</h1>
+        
+        <form action="" id="myform" name= "calc">
+            
+            <input class="Display"    name="display"> <br/>
+            <input class="symbol ce" type="button" value="CE"  style="opacity:.5;" Onclick="calc.display.value=''"> 
+            <input class="symbol ac " type="button" value="AC"  style="background-color :red" Onclick="calc.display.value=''"> 
+            <input class="symbol c" type="button" value="C" style="background-color :red" Onclick="calc.display.value=''"> 
+            <input class="symbol del" id="del"  type="button" value="Del" style="background-color :black;
+                                                opacity: .7
+                                                "
+                                                Onclick="calc.display.value=calc.display.value.substr(0,calc.display.value.length-1)"
+
+                                               > <br>
+            
+            <input type="button" value="7" Onclick="calc.display.value+='7'"> 
+            <input type="button" value="8" Onclick="calc.display.value+='8'">
+            <input type="button" value="9" Onclick="calc.display.value+='9'">
+            
+            <input type="button" value="&#247" style="background-color:green" Onclick="calc.display.value+='/'"> <br>
+            
+            <input type="button" value="4" Onclick="calc.display.value+='4'">
+            <input type="button" value="5" Onclick="calc.display.value+='5'">
+            <input type="button" value="6" Onclick="calc.display.value+='6'">
+            <input type="button" value="X" Onclick="calc.display.value+='*'"><br>
+           
+            
+            
+            
+            <input type="button" value="1" Onclick="calc.display.value+='1'">
+            <input type="button" value="2" Onclick="calc.display.value+='2'">
+            <input type="button" value="3"Onclick="calc.display.value+='3'">
+            <input type="button" value="-" Onclick="calc.display.value+='-'"><br>
+
+            
+            <input type="button" value="0" Onclick="calc.display.value+='0'">
+            <input type="button" value="." Onclick="calc.display.value+='.'">
+            <input type="button" value="="  Onclick="calc.display.value=eval(calc.display.value)">
+            <input type="button" value="+" Onclick="calc.display.value+='+'">
+ 
+        </form>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
+</html>
